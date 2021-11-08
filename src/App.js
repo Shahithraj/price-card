@@ -1,24 +1,81 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./Card";
 
 function App() {
+  let free = {
+    title: "FREE",
+    price: 0,
+    user: "Single User",
+    userEnabler: true,
+    storage: "5GB Storage",
+    storageEnabler: true,
+    publicProjects: "Unlimited Public Projects",
+    publicProjectsEnabler: true,
+    access: "Community Access",
+    accessEnabler: true,
+    privateProjects: "Unlimited Private Projects",
+    privateProjectsEnabler: false,
+    phoneSupport: "Dedicated Phone Support",
+    phoneSupportEnabler: false,
+
+    subdomain: "free  Subdomain",
+    subdomainEnabler: false,
+    reports: "Monthly Status Reports ",
+    reportsEnabler: true,
+  };
+
+  let plus = {
+    title: "PLUS",
+    price: 9,
+    user: "5 Users",
+    userEnabler: true,
+    storage: "50GB Storage",
+    storageEnabler: true,
+    publicProjects: "Unlimited Public Projects",
+    publicProjectsEnabler: true,
+    access: "Community Access",
+    accessEnabler: true,
+    privateProjects: "Unlimited Private Projects",
+    privateProjectsEnabler: true,
+    phoneSupport: "Dedicated Phone Support",
+    phoneSupportEnabler: true,
+    subdomain: "free  Subdomain",
+    subdomainEnabler: true,
+    reports: "Monthly Status Reports ",
+    reportsEnabler: false,
+  };
+
+  let pro = {
+    title: "PRO",
+    price: 49,
+    user: "Unlimited Users",
+    userEnabler: true,
+    storage: "150GB Storage",
+    storageEnabler: true,
+    publicProjects: "Unlimited Public Projects",
+    publicProjectsEnabler: true,
+    access: "Community Access",
+    accessEnabler: true,
+    privateProjects: "Unlimited Private Projects",
+    privateProjectsEnabler: true,
+    phoneSupport: "Dedicated Phone Support",
+    phoneSupportEnabler: true,
+    subdomainPrefix: "Unlimited",
+    subdomain: " free  Subdomain",
+    subdomainEnabler: true,
+    reports: "Monthly Status Reports ",
+    reportsEnabler: true,
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="pricing py-5">
+      <div className="container">
+        <div className="row">
+          <Card type={free} />
+          <Card type={plus} />
+          <Card type={pro} />
+        </div>
+      </div>
+    </section>
   );
 }
 
